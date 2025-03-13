@@ -90,7 +90,7 @@ function Process-Menu {
 	}
        '6' {
 	    cmd /c "fsutil usn readJournal C: csv > AllTheJournal.txt"
-            ALlTheJournal.txt
+            AllTheJournal.txt
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
