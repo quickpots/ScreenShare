@@ -98,7 +98,7 @@ function Process-Menu {
             Process-Menu -Choice $selection
 	}
        '7' {
-	    cmd /c "fstuil usn readJournal C: csv > AllTheJournal.txt"
+	    cmd /c "fsutil usn readJournal C: csv > AllTheJournal.txt"
 	    AllTheJournal.txt
             Read-Host "press any button to continue" 
             Clear-Host
