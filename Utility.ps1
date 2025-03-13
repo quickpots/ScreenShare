@@ -48,13 +48,15 @@ function Process-Menu {
     switch($Choice) {
         '1' {
 	    ls -Fo 'C:\$Recycle.Bin'
+            Read-Host "press any button to continue" 
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
         }   
         '2' {
 	    Get-Service SysMain; Get-Service DiagTrack; Get-Service DPS; Get-Service PcaSvc; Get-Service BAM; Get-Service DNSCache; Get-Service AppInfo; Get-Service CDPUserSvc; Get-Service SGRMBroker; Get-Service EventLog
-            Clear-Host
+            Read-Host "press any button to continue" 
+	    Clear-Host
             Menu
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
@@ -62,6 +64,7 @@ function Process-Menu {
         '4' {
 	    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 	    Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/PureIntent/ScreenShare/main/RedLotusBam.ps1)
+            Read-Host "press any button to continue" 
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
@@ -97,6 +100,7 @@ function Process-Menu {
        '7' {
 	    cmd /c "fstuil usn readJournal C: csv > AllTheJournal.txt"
 	    AllTheJournal.txt
+            Read-Host "press any button to continue" 
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
