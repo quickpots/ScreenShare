@@ -47,7 +47,7 @@ function Process-Menu {
     )
     switch($Choice) {
         '1' {
-	    Get-ChildItem -Force 'C:\$Recycle.Bin'
+	    ls -Fo 'C:\$Recycle.Bin'
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
