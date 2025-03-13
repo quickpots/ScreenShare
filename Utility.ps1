@@ -37,6 +37,7 @@ function Menu {
     Write-Host "5.  Scheduler Checks"
     Write-Host "6.  DMA Checks"
     Write-Host "7.  Fsutil"
+    Write-Host "7.  HardDiskVolume Lister"    
     Write-Host "===================="
 }
 
@@ -105,7 +106,16 @@ function Process-Menu {
             Menu
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
-	}		
+	}	
+        '8' {
+            Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+            Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/bacanoicua/Screenshare/main/RedLotusHardDiskVolumeConverter.ps1)
+	    Read-Host "press any button to continue"  
+            Clear-Host
+            Menu
+            $selection = Read-Host "Select an option"
+            Process-Menu -Choice $selection
+	}
         default {
             Write-Host "Invalid option, please try again."
         }
