@@ -90,7 +90,7 @@ function Process-Menu {
 	}
        '6' {
             Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-            Invoke-Expression (Invoke-RestMethod https://quickpots.fun/screenshare/tools/DMA.ps1)
+            Invoke-Expression (Invoke-RestMethod https://quickpots.fun/screenshare/DMA.ps1)
 	    Read-Host "press any button to continue"  
             Clear-Host
             Menu
