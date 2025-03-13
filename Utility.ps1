@@ -46,7 +46,8 @@ function Process-Menu {
     )
     switch($Choice) {
         '1' {
-	    Get-Service SysMain; Get-Service DiagTrack; Get-Service DPS; Get-Service PcaSvc; Get-Service BAM; Get-Service DNSCache; Get-Service AppInfo; Get-Service CDPUserSvc; Get-Service SGRMBroker; Get-Service EventLog
+	    Get-Service SysMain; Get-Service DiagTrack; Get-Service DPS; Get-Service PcaSvc; Get-Service BAM
+            Get-Service DNSCache; Get-Service AppInfo; Get-Service CDPUserSvc; Get-Service SGRMBroker; Get-Service EventLog
             Read-Host "press any button to continue" 
 	    Clear-Host
             Menu
