@@ -46,8 +46,7 @@ function Process-Menu {
     )
     switch($Choice) {
         '1' {
-            Get-Service SysMain; Get-Service DiagTrack; Get-Service DPS; Get-Service PcaSvc; Get-Service BAM; Get-Service DNSCache; Get-Service AppInfo; Get-Service CDPUserSvc; Get-Service SGRMBroker; Get-Service EventLog	
-            Read-Host "press any button to continue" 
+            get-service | findstr -i "pcasvc"; get-service | findstr -i "DPS"; get-service | findstr -i "Diagtrack"; get-service | findstr -i "sysmain"; get-service | findstr -i "eventlog"; get-service | findstr -i "sgrmbroker": get-service | findstr -i "cdpusersvc"
 	    Clear-Host
             Menu
             $selection = Read-Host "Select an option"
