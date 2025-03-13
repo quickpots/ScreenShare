@@ -35,7 +35,7 @@ function Menu {
     Write-Host "3.  Analyse Prefetch"
     Write-Host "4   Scheduler Checks"
     Write-Host "5.  DMA Checks"
-	Write-Host "6.  Fsutil"
+    Write-Host "6.  Fsutil"
     Write-Host "===================="
 }
 
