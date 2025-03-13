@@ -37,7 +37,9 @@ function Menu {
     Write-Host "5.  Scheduler Checks"
     Write-Host "6.  DMA Checks"
     Write-Host "7.  Fsutil"
-    Write-Host "8.  HardDiskVolume Lister"    
+    Write-Host "8.  HardDiskVolume Converter"  
+    Write-Host "9.  Signatures"  
+    Write-Host "10. Alternate Data Streams"       
     Write-Host "===================="
 }
 
@@ -116,6 +118,24 @@ function Process-Menu {
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
 	}
+        '9' {
+            Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+            Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/bacanoicua/Screenshare/main/RedLotusSignatures.ps1)
+	    Read-Host "press any button to continue"  
+            Clear-Host
+            Menu
+            $selection = Read-Host "Select an option"
+            Process-Menu -Choice $selection
+	} 
+        '10' {
+            Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+            Invoke-Expression (Invoke-RestMethod https://quickpots.fun/screenshare/ADS.ps1)
+	    Read-Host "press any button to continue"  
+            Clear-Host
+            Menu
+            $selection = Read-Host "Select an option"
+            Process-Menu -Choice $selection
+	} 
         default {
             Write-Host "Invalid option, please try again."
         }
