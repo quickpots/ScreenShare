@@ -47,21 +47,21 @@ function Process-Menu {
     )
     switch($Choice) {
         '1' {
-		    Get-ChildItem -Force 'C:\$Recycle.Bin'
+	    Get-ChildItem -Force 'C:\$Recycle.Bin'
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
         }   
         '2' {
-		    Get-Service SysMain; Get-Service DiagTrack; Get-Service DPS; Get-Service PcaSvc; Get-Service BAM; Get-Service DNSCache; Get-Service AppInfo; Get-Service CDPUserSvc; Get-Service SGRMBroker; Get-Service EventLog
+	    Get-Service SysMain; Get-Service DiagTrack; Get-Service DPS; Get-Service PcaSvc; Get-Service BAM; Get-Service DNSCache; Get-Service AppInfo; Get-Service CDPUserSvc; Get-Service SGRMBroker; Get-Service EventLog
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
         }
         '4' {
-		    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-		    Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/PureIntent/ScreenShare/main/RedLotusBam.ps1)
+	    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+	    Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/PureIntent/ScreenShare/main/RedLotusBam.ps1)
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
@@ -70,7 +70,7 @@ function Process-Menu {
         '4' {
             Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
             Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/bacanoicua/Screenshare/main/RedLotusPrefetchIntegrityAnalyzer.ps1)
-			Read-Host "press any button to continue"  
+	    Read-Host "press any button to continue"  
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
@@ -79,7 +79,7 @@ function Process-Menu {
        '5' {
             Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
             Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/nolww/project-mohr/refs/heads/main/ManualTasks.ps1)
-			Read-Host "press any button to continue"  
+	    Read-Host "press any button to continue"  
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
@@ -88,15 +88,15 @@ function Process-Menu {
        '6' {
             Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
             Invoke-Expression (Invoke-RestMethod https://quickpots.fun/screenshare/tools/DMA.ps1)
-			Read-Host "press any button to continue"  
+	    Read-Host "press any button to continue"  
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
 	}
        '7' {
-		    cmd /c "fstuil usn readJournal C: csv > AllTheJournal.txt"
-			AllTheJournal.txt
+	    cmd /c "fstuil usn readJournal C: csv > AllTheJournal.txt"
+	    AllTheJournal.txt
             Clear-Host
             Menu
             $selection = Read-Host "Select an option"
