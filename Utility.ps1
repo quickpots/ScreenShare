@@ -51,7 +51,7 @@ function Process-Menu {
     )
     switch($Choice) {
         '1' {
-	    ls -Fo 'C:\$Recycle.Bin'
+	    Get-ChildItem -Force 'C:\$Recycle.Bin'
             Read-Host "press any button to continue" 
             Clear-Host
             Menu
