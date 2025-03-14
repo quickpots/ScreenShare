@@ -39,7 +39,8 @@ function Menu {
     Write-Host "7.  Fsutil"
     Write-Host "8.  HardDiskVolume Converter"  
     Write-Host "9.  Signatures"  
-    Write-Host "10. Alternate Data Streams"       
+    Write-Host "10. Alternate Data Streams"
+    Write-Host "11. Serials"      
     Write-Host "===================="
 }
 
@@ -136,6 +137,32 @@ function Process-Menu {
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
 	} 
+        '11' {
+            cmd /c  "wmic diskdrive get serialnumber"
+	    cmd /c  "wmic VOLUME GET BlockSize,Capacity,DriveLetter,FileSystem,FreeSpace,IndexingEnabled,Label,MaximumFileNameLength"
+            cmd /c "echo Motherboard (Base Board):"
+	    cmd /c "wmic baseboard get serialnumber"
+	    cmd /c "echo SMBios:"
+            cmd /c "wmic path win32_computersystemproduct get uuid"
+            cmd /c "echo MEMORY"
+	    cmd /c "wmic MEMORYCHIP GET BankLabel,DataWidth,Manufacturer,PartNumber,Capacity,Speed,TypeDetail"
+	    cmd /c "echo GPU"
+            cmd /c "wmic PATH Win32_videocontroller GET AdapterRAM,CurrentRefreshRate,Description,DriverVersion,VideoModeDescription"
+            cmd /c "echo Bios: & wmic csproduct get uuid"
+	    cmd  /c "echo CPU (Processor):"
+            cmd /c "wmic cpu get processorid, caption, deviceid, name"
+	    cmd /c "echo Mac Address:"
+            cmd /c "getmac"
+	    cmd /c "echo System:"
+            cmd /c "wmic OS GET Caption,CodeSet,CSName,InstallDate,Locale,NumberOfProcesses,OSArchitecture,SerialNumber,SystemDirectory,Version"
+	    cmd /c "echo Startup programs:"
+            cmd /c "wmic STARTUP GET Caption,Command,Location"
+	    Read-Host "press any button to continue" 
+            Clear-Host
+            Menu
+            $selection = Read-Host "Select an option"
+            Process-Menu -Choice $selection
+	}  
         default {
             Write-Host "Invalid option, please try again."
         }
