@@ -165,6 +165,10 @@ function Process-Menu {
 	}  
         default {
             Write-Host "Invalid option, please try again."
+	    Menu
+            $selection = Read-Host "Select an option"
+	    Process-Menu -Choice $selection
+
         }
     }
 }
