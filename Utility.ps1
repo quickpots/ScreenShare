@@ -27,6 +27,10 @@ function Menu {
                                                                                            
 "@	
 Write-Host "PC Checker Script by Alyazz"
+
+
+
+
     Write-Host "===================="
     Write-Host "  PC Checker Script "
     Write-Host "===================="
