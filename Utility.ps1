@@ -69,7 +69,7 @@ function Process-Menu {
             $selection = Read-Host "Select an option"
             Process-Menu -Choice $selection
         }
-        '4' {
+        '3' {
 	    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 	    Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/PureIntent/ScreenShare/main/RedLotusBam.ps1)
             Read-Host "press any button to continue" 
