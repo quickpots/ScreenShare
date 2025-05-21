@@ -21,6 +21,7 @@ powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powersh
 ```
 
 ## Alt Checker:
+
 1. open cmd as admin
 2. run this:
 ```
@@ -32,7 +33,6 @@ powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powersh
 
 ## BAM Script:
 
-## Alt Checker:
 1. open cmd as admin
 2. run this:
 ```
