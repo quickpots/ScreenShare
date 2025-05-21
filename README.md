@@ -19,3 +19,24 @@ ScreenSharing tools
 ```
 powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/CSRSS.ps1)
 ```
+
+## Alt Checker:
+1. open cmd as admin
+2. run this:
+```
+powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/MinecraftAccounts.ps1)
+```
+
+3. wait for results
+
+
+## BAM Script:
+
+## Alt Checker:
+1. open cmd as admin
+2. run this:
+```
+powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/BAM.ps1)
+```
+
+3. check relevant dates
