@@ -17,14 +17,14 @@ ScreenSharing tools
 7. open cmd as admin
 8. run this:
 ```
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/CSRSS.ps1)
+powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/powershell/CSRSS.ps1)
 ```
 
 ## Alt Checker:
 1. open cmd as admin
 2. run this:
 ```
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/MinecraftAccounts.ps1)
+powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/powershell/MinecraftAccounts.ps1)
 ```
 
 3. wait for results
@@ -36,7 +36,7 @@ powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powersh
 1. open cmd as admin
 2. run this:
 ```
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/BAM.ps1)
+powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/powershell/BAM.ps1)
 ```
 
 3. check relevant dates
