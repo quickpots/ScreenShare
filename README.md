@@ -1,42 +1,4 @@
 # ScreenShare
-ScreenSharing tools
+ScreenSharing tools ive collected. theyre all pretty good. most of them arent mine.
 
 
-# How to use:
-
-## CSRSS Scan:
-
-1. dump csrss with the lower private bytes
-2. filter for ``^[A-Z]:\\.+.exe$`` (Regex case-sensitive)
-3. save the results to C:\ as "res1.txt"
-
-4. dump the higher private byte version of csrss
-5. filter for ``^[A-Z]:\\.+.dll$`` (Regex case-sensitive)
-6. save the results to C:\ as "res2.txt"
-
-7. open cmd as admin
-8. run this:
-```
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/powershell/CSRSS.ps1)
-```
-
-## Alt Checker:
-
-1. open cmd as admin
-2. run this:
-```
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/powershell/MinecraftAccounts.ps1)
-```
-
-3. wait for results
-
-
-## BAM Script:
-
-1. open cmd as admin
-2. run this:
-```
-powershell Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass && powershell Invoke-Expression (Invoke-RestMethod https://raw.githubusercontent.com/QuickPots/ScreenShare/main/powershell/BAM.ps1)
-```
-
-3. check relevant dates
