@@ -1,7 +1,13 @@
 Clear-Host
 
+$pecmdUrl = "https://github.com/NoDiff-del/JARs/releases/download/Jar/PECmd.exe"
+$xxstringsUrl = "https://github.com/NoDiff-del/JARs/releases/download/Jar/xxstrings64.exe"
+
 $pecmdPath = "C:\SS1\PECmd.exe"
-$xxstringsUrl = "C:\SS1\xxstrings64.exe"
+$xxstringsPath = "C:\SS1\xxstrings64.exe"
+
+Invoke-WebRequest -Uri $pecmdUrl -OutFile $pecmdPath
+Invoke-WebRequest -Uri $xxstringsUrl -OutFile $xxstringsPath
 
 $logonTime = (Get-CimInstance -ClassName Win32_OperatingSystem).LastBootUpTime
 
